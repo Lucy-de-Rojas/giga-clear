@@ -1,4 +1,8 @@
 .cardWrapper {
   width: 30%;
-  background-color: green;
+  margin: 20px 10px;
+}
+
+.paras {
+  display: flex;
 }

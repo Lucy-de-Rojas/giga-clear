@@ -41,18 +41,14 @@ const Posts = () => {
         return (<div>
                 <h1>Check Our Latest Posts</h1>
 
-                <div className={styles.wrapper}>
+                <div className={styles.postsWrapper}>
 
 
                 {posts && posts.map((item:DataPost) => {
                         // Card goes below:
-                        return <div>
-
-                        <Card post={item}/>
+                        return                        <Card post={item}/>
 
 
-
-                        </div>
                 })}
 
                 </div>

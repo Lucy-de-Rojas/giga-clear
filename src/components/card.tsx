@@ -29,10 +29,10 @@ const Card = ({post}:any):JSX.Element => {
 
 
                 {/* 3 mini paras */}
-                <div>
+                <div className={styles.paras}>
                         <p>{post.topic}</p>
                         <p>{post.user}</p>
-                        <p>{post.date}</p>
+                        <p className={styles.dateWideScreen}>{post.date}</p>
                 </div>
 
 
@@ -40,6 +40,12 @@ const Card = ({post}:any):JSX.Element => {
 
                 {/* short descr: */}
                 <p>{post.descriptionShort}</p>
+
+
+
+
+                {/* date for small screen: */}
+                <p className={styles.dateSmallScreen}>{post.date}</p>
 
 
 
