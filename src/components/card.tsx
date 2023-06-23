@@ -11,36 +11,6 @@ const Card = ({post}:any):JSX.Element => {
 
 
 
-        function handleMouseOver (event:React.SyntheticEvent) {
-
-                let id = (event.target as HTMLElement).id;
-                console.log('id', id);
-
-
-
-
-
-
-
-
-
-        }
-
-
-
-        function handleMouseOut (event:React.SyntheticEvent) {
-
-                let target = (event.target as HTMLElement);
-
-
-        }
-
-
-
-        function handleClick (event:React.SyntheticEvent) {}
-
-
-
 
 
 
@@ -49,8 +19,7 @@ const Card = ({post}:any):JSX.Element => {
 
         return (<div className={styles.cardWrapper}
                 id={post.id}
-                onMouseOver={handleMouseOver}
-                onMouseOut={handleMouseOut}
+
                                 >
 
 
@@ -59,7 +28,7 @@ const Card = ({post}:any):JSX.Element => {
                 <Image
                 src={post.image}
                 width={1000}
-                height={700}
+                height={703}
                 alt={post.alt}
                 layout="responsive"
 

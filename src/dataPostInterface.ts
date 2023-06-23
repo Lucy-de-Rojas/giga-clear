@@ -1,6 +1,8 @@
 export interface DataPost {
         id: number;
         image: string;
+        location: string;
+        price:number;
         alt:string;
         title: string;
         descriptionShort: string;
