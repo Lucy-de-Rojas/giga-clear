@@ -1,13 +1,57 @@
 import { DataPost } from "src/dataPostInterface";
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from '../styles/card.module.sass';
+
+
+
 
 const Card = ({post}:any):JSX.Element => {
 
 
 
-        return (<div className={styles.cardWrapper}>
+        function handleMouseOver (event:React.SyntheticEvent) {
+
+                let id = (event.target as HTMLElement).id;
+                console.log('id', id);
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+        function handleMouseOut (event:React.SyntheticEvent) {
+
+                let target = (event.target as HTMLElement);
+
+
+        }
+
+
+
+        function handleClick (event:React.SyntheticEvent) {}
+
+
+
+
+
+
+
+
+
+        return (<div className={styles.cardWrapper}
+                id={post.id}
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+                                >
 
 
                 {/* image wrapper: */}
@@ -46,6 +90,8 @@ const Card = ({post}:any):JSX.Element => {
 
                 {/* date for small screen: */}
                 <p className={styles.dateSmallScreen}>{post.date}</p>
+
+
 
 
 

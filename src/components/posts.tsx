@@ -14,6 +14,7 @@ import NoPosts from "./noPosts";
 
 
 
+
 const Posts = () => {
 
         const [posts, setPosts] = useState<DataPost[]>([]);
@@ -38,17 +39,20 @@ const Posts = () => {
 
 
 
+
+
         return (<div>
                 <h1>Check Our Latest Posts</h1>
 
                 <div className={styles.postsWrapper}>
 
 
+
+
+                {/* if there are posts: */}
                 {posts && posts.map((item:DataPost) => {
                         // Card goes below:
-                        return                        <Card post={item}/>
-
-
+                        return <Card post={item}/>
                 })}
 
                 </div>
@@ -56,6 +60,10 @@ const Posts = () => {
 
                 {/* if no posts: */}
                 {posts.length ==  0 && <NoPosts />}
+
+
+
+
 
 
 

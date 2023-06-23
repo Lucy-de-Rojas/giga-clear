@@ -4,6 +4,8 @@
 .cardWrapper
         width: 30%
         margin: 20px 10px
+        cursor: pointer
+        transition: all 1s
 
         @media (max-width:$widthScreen)
                 width: 100%
@@ -13,14 +15,16 @@
         display: flex
         justify-content: space-between
 
-
+        // styling individual paras:
         *
                 background-color: #f8ece4
                 color: $primary
-                padding: 10px 5px
+                padding: 10px 15px
                 margin: 5px
                 text-align: center
                 border-radius: 10px
+                display: flex
+                align-items: center
 
 
 .dateWideScreen
@@ -31,5 +35,7 @@
 
 
 .dateSmallScreen
+        color: $grey
+
         @media (min-width: $widthScreen)
                 display: none
