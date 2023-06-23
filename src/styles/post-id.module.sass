@@ -14,6 +14,12 @@
         top:0%
         font-size: 5rem
         text-align: right
+        transition: all 2s
+        filter: drop-shadow(2px 2px 5px black)
+        &:hover
+                color: $primary
+                font-size: 7rem
+                filter: drop-shadow(2px 2px 2px black)
 
 
 
@@ -71,12 +77,26 @@
 .button
         background-color: $primary
         color: white
+        width: 30%
         height: 50px
-        width: 15%
         outline: none
         cursor: pointer
         border: 0
         border-radius: 10px
+        transition: all 2s
+        font-size: 1rem
+
+        *
+                text-decoration: none
+                color: white
+
+        &:hover
+                background-color: $alternative
+                color: white
+                width: 35%
+                height: 75px
+                font-size: 1.5rem
+
 
 
 

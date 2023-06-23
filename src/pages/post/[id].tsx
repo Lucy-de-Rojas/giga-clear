@@ -67,6 +67,7 @@ const PostById = () =>{
         return (<Layout><div className={styles.postWrapper}>
 
 
+        {/* HOME button: */}
                 <Link href="/" className={styles.homeButton}>
                         <ImHome3 />
                         </Link>
@@ -107,7 +108,7 @@ const PostById = () =>{
 
                         </div>
 
-                        <button className={styles.button}>Sign up to this event</button>
+                        <button className={styles.button}><Link href="/signup">Sign up to this event</Link></button>
                 </div>
 
 

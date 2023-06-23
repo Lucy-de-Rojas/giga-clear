@@ -52,7 +52,7 @@ const Posts = () => {
                 {/* if there are posts: */}
                 {posts && posts.map((item:DataPost) => {
                         // Card goes below:
-                        return <Card post={item}/>
+                        return <Card post={item} />
                 })}
 
                 </div>
