@@ -19,7 +19,7 @@ export default function handler(
         let data:DataPost[] =
                 [{
                         id: 1,
-                        image: '/Media/Image.jpg',
+                        image: '/Media/business.jpg',
                         location: "Corn Exchange, Whitney, Oxfordshire",
                         price: 0,
                         alt: 'image description',
@@ -32,7 +32,7 @@ export default function handler(
                         time: '16:00',
                 }, {
                         id: 2,
-                        image: '/Media/Image.jpg',
+                        image: '/Media/new-site.jpg',
                         location: "Corn Exchange, Whitney, Oxfordshire",
                         price: 0,
                         alt: 'image description',
@@ -59,7 +59,7 @@ export default function handler(
                 },
                 {
                         id: 4,
-                        image: '/Media/Image.jpg',
+                        image: '/Media/surfer.jpg',
                         location: "Corn Exchange, Whitney, Oxfordshire",
                         price: 0,
                         alt: 'image description',
@@ -73,7 +73,7 @@ export default function handler(
                 },
                 {
                         id: 5,
-                        image: '/Media/Image.jpg',
+                        image: '/Media/chicken.jpg',
                         location: "Corn Exchange, Whitney, Oxfordshire",
                         price: 0,
                         alt: 'image description',

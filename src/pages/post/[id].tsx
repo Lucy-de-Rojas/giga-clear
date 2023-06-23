@@ -60,7 +60,7 @@ const PostById = () =>{
                 }
 
                 getData()
-        });   // 🟥🟥🟥🟥🟥 remove brackets when done
+        });
 
 
 
