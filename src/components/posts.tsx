@@ -1,6 +1,16 @@
 import React from "react";
 import {useState, useEffect} from 'react';
+
+import styles from '../styles/posts.module.sass';
+
+
 import { DataPost } from "src/dataPostInterface";
+import Card from "./card";
+import NoPosts from "./noPosts";
+
+
+
+
 
 
 
@@ -29,11 +39,28 @@ const Posts = () => {
 
 
         return (<div>
-                <h1>Posts</h1>
+                <h1>Check Our Latest Posts</h1>
 
-                {posts && posts.map((item) => {
-                        return <div>{item.title}</div>;
+                <div className={styles.wrapper}>
+
+
+                {posts && posts.map((item:DataPost) => {
+                        // Card goes below:
+                        return <div>
+
+                        <Card post={item}/>
+
+
+
+                        </div>
                 })}
+
+                </div>
+
+
+                {/* if no posts: */}
+                {posts.length ==  0 && <NoPosts />}
+
 
 
 
