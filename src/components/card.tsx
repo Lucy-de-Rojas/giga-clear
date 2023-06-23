@@ -6,8 +6,11 @@ import styles from '../styles/card.module.sass';
 
 
 
-
+// temporary any: remove at the end
 const Card = ({post}:any):JSX.Element => {
+
+
+        let link = "/post/" + post.id;
 
 
 
@@ -23,8 +26,14 @@ const Card = ({post}:any):JSX.Element => {
                                 >
 
 
+                <Link href={link}>
+
+
+
+
+
                 {/* image wrapper: */}
-                <div style={{width:'100%'}}>
+                <div className={styles.imageWrapper}>
                 <Image
                 src={post.image}
                 width={1000}
@@ -66,7 +75,7 @@ const Card = ({post}:any):JSX.Element => {
 
 
 
-
+                </Link>
 
 
         </div>);

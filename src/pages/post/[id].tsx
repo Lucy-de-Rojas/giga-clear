@@ -1,9 +1,15 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { DataPost } from "src/dataPostInterface";
 import styles from '../../styles/post-id.module.sass';
 import { spawn } from "child_process";
+import { Layout } from "src/components/layout";
+
+import {ImHome3} from 'react-icons/im';
+
+
 
 
 
@@ -58,7 +64,15 @@ const PostById = () =>{
 
 
 
-        return (<div className={styles.postWrapper}>
+        return (<Layout><div className={styles.postWrapper}>
+
+
+                <Link href="/" className={styles.homeButton}>
+                        <ImHome3 />
+                        </Link>
+
+
+
                 <h1>{postData?.title}</h1>
                 <p>{postData?.descriptionShort}</p>
 
@@ -68,13 +82,14 @@ const PostById = () =>{
 
                 {/* image: */}
                 <div className={styles.imageWrapper}>
+                        {postData?.image &&
                 <Image
                         src={postData?.image}
                         width={1000}
                         height={703}
                         alt={postData?.alt}
                         layout="responsive"
-                        />
+                        />}
                         </div>
 
 
@@ -111,7 +126,7 @@ const PostById = () =>{
 
                 {/* no data: */}
                 {!postData && <p>no data</p>}
-        </div>)
+        </div></Layout>)
 }
 
 
