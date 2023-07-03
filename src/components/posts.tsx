@@ -44,18 +44,18 @@ const Posts = () => {
         return (<div>
                 <h1>Check Our Latest Posts</h1>
 
+
+
                 <div className={styles.postsWrapper}>
-
-
 
 
                 {/* if there are posts: */}
                 {posts && posts.map((item:DataPost) => {
                         // Card goes below:
-                        return <Card post={item} />
-                })}
+                return <span key={item.id}>  <Card post={item} /> </span>;
+                        })}
 
-                </div>
+                        </div>
 
 
                 {/* if no posts: */}
