@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -18,7 +18,8 @@ const PostById = () =>{
 
 
         let router = useRouter();
-        let id:number =parseInt(router.query.id);
+        let id=  parseInt(router.query.id as string);
+        
 
 
         const [postData, setPostData] = useState<DataPost>();
