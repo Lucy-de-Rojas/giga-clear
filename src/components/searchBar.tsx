@@ -2,9 +2,13 @@ import React from "react";
 import styles from '../styles/searchBar.module.sass';
 
 
-export default function SearchBar ({setSearchWord}):JSX.Element {
+interface SearchBarProps {
+    setSearchWord: (value: string) => void;
+}
 
-        function handleInputChange (e) {
+export default function SearchBar ({setSearchWord}: SearchBarProps): JSX.Element {
+
+        function handleInputChange (e: React.ChangeEvent<HTMLInputElement>) {
                 setSearchWord(e.target.value);
         }
 

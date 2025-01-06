@@ -7,7 +7,7 @@ import styles from '../styles/card.module.sass';
 
 
 // temporary any: remove at the end
-const Card = ({post}:any):JSX.Element => {
+const Card = ({ post }: { post: DataPost }): JSX.Element => {
 
 
         let link = "/post/" + post.id;
@@ -21,7 +21,7 @@ const Card = ({post}:any):JSX.Element => {
 
 
         return (<div className={styles.cardWrapper}
-                id={post.id}
+                id={post.id.toString()}
 
                                 >
 
