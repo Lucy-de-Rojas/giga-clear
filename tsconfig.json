@@ -21,6 +21,6 @@
       "@/molecules/*": ["src/components/molecules/*"],
     },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/posts.tsx"],
   "exclude": ["node_modules"]
 }

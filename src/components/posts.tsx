@@ -14,7 +14,7 @@ import NoPosts from "./noPosts";
 
 
 
-const Posts = ({searchWord}: {searchWord: string}) => {
+const Posts = ({searchWord}:{searchWord: string}) => {
 
         const [posts, setPosts] = useState<DataPost[]>([]);
         const [postsFiltered, setPostsFiltered] = useState<DataPost[]>([]);
@@ -52,21 +52,21 @@ const Posts = ({searchWord}: {searchWord: string}) => {
 
 
                         // highlight keyword in results:
-                        filteredPosts = filteredPosts.map((item) => {
+                        // filteredPosts = filteredPosts.map((item) => {
 
-                                const regex = new RegExp(`(${searchWord})`, 'gi');
-
-
-                                const highlightedTitle = item.title.replace(regex, '<span style="font-weight: bold;">$1</span>');
+                        //         const regex = new RegExp(`(${searchWord})`, 'gi');
 
 
-                                const highlightedDescription = item.descriptionShort.replace(regex, '<span style="font-weight: bold;">$1</span>');
-                                return {
-                                        ...item,
-                                        title: highlightedTitle,
-                                        descriptionShort: highlightedDescription
-                                };
-                        });
+                        //         const highlightedTitle = item.title.replace(regex, '<span style="font-weight: bold;">$1</span>');
+
+
+                        //         const highlightedDescription = item.descriptionShort.replace(regex, '<span style="font-weight: bold;">$1</span>');
+                        //         return {
+                        //                 ...item,
+                        //                 title: highlightedTitle,
+                        //                 descriptionShort: highlightedDescription
+                        //         };
+                        // });
 
 
 
