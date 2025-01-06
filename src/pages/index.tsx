@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 export default function Home():JSX.Element {
 
 
-  const [searchWord, setSearchWord] = useState('');
+  const [searchWord, setSearchWord] = useState<string>('');
 
 
 

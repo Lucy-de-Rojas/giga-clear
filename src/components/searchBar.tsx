@@ -6,6 +6,7 @@ interface SearchBarProps {
     setSearchWord: (value: string) => void;
 }
 
+
 export default function SearchBar ({setSearchWord}: SearchBarProps): JSX.Element {
 
         function handleInputChange (e: React.ChangeEvent<HTMLInputElement>) {
