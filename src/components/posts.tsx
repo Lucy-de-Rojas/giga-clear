@@ -14,10 +14,12 @@ import NoPosts from "./noPosts";
 
 
 
-const Posts = ({searchWord}) => {
+const Posts = ({searchWord}: {searchWord: string}) => {
 
         const [posts, setPosts] = useState<DataPost[]>([]);
         const [postsFiltered, setPostsFiltered] = useState<DataPost[]>([]);
+
+        let highlightText = {"font-weigth": "bold",}
 
 
 
@@ -36,12 +38,45 @@ const Posts = ({searchWord}) => {
                 getPosts();
         }, []);
 
+
+
+
+
         useEffect(() => {
                 // filtering posts:
                 if (searchWord) {
                         let filteredPosts = posts.filter((item) => {
                                 return item.title.toLowerCase().includes(searchWord.toLowerCase()) || item.descriptionShort.toLowerCase().includes(searchWord.toLowerCase());
                         });
+
+
+
+                        // highlight keyword in results:
+                        filteredPosts = filteredPosts.map((item) => {
+
+                                const regex = new RegExp(`(${searchWord})`, 'gi');
+
+
+                                const highlightedTitle = item.title.replace(regex, '<span style="font-weight: bold;">$1</span>');
+
+
+                                const highlightedDescription = item.descriptionShort.replace(regex, '<span style="font-weight: bold;">$1</span>');
+                                return {
+                                        ...item,
+                                        title: highlightedTitle,
+                                        descriptionShort: highlightedDescription
+                                };
+                        });
+
+
+
+
+
+
+
+
+
+
                         setPostsFiltered(filteredPosts);
                 } else {
                         setPostsFiltered(posts);
@@ -49,45 +84,6 @@ const Posts = ({searchWord}) => {
         }, [searchWord, posts]);
 
 
-
-
-        // useEffect(() => {
-        //         // getting data for posts:
-        //         async function getPosts() {
-        //                 let response = await fetch("/api/posts");
-        //                 let data:DataPost[] = await response.json();
-
-        //                 setPostsFiltered(data);
-        //                 setPosts(data);
-        //         }
-        //         getPosts();
-
-
-
-        //         // filtering posts:
-        //         if(searchWord) {
-
-        //                 let filteredPosts = posts.filter((item) => {
-        //                         return item.title.toLowerCase().includes(searchWord.toLowerCase()) || item.descriptionShort.toLowerCase().includes(searchWord.toLowerCase());
-        //                 });
-
-        //                 setPostsFiltered(filteredPosts);
-
-        //         }
-
-
-
-        //         if (postsFiltered.length > 0) {
-        //                 setPostsFiltered(postsFiltered);
-        //                 console.log("filtered posts  🟩",postsFiltered);
-        //         }
-
-
-
-
-
-
-        // },[postsFiltered]);
 
 
 
