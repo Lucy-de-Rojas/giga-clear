@@ -34,6 +34,7 @@ const Card = ({post}:any):JSX.Element => {
 
                 {/* image wrapper: */}
                 <div className={styles.imageWrapper}>
+
                 <Image
                 src={post.image}
                 width={1000}
@@ -62,8 +63,6 @@ const Card = ({post}:any):JSX.Element => {
 
                 {/* short descr: */}
                 <p>{post.descriptionShort}</p>
-
-
 
 
                 {/* date for small screen: */}

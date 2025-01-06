@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  sassOptions: {implementation: 'sass-embedded',},
 }
 
 module.exports = nextConfig
