@@ -6,8 +6,7 @@ import styles from '../styles/card.module.sass';
 
 
 
-// temporary any: remove at the end
-const Card = ({ post }: { post: DataPost }): JSX.Element => {
+const Card = ({ post, searchWord }: { post: DataPost, searchWord:string } ): JSX.Element => {
 
 
         let link = "/post/" + post.id;
@@ -27,10 +26,6 @@ const Card = ({ post }: { post: DataPost }): JSX.Element => {
 
 
                 <Link href={link}>
-
-
-
-
 
                 {/* image wrapper: */}
                 <div className={styles.imageWrapper}>
@@ -62,7 +57,9 @@ const Card = ({ post }: { post: DataPost }): JSX.Element => {
 
 
                 {/* short descr: */}
-                <p>{post.descriptionShort}</p>
+                <p dangerouslySetInnerHTML={{ __html: post.descriptionShort.replace(new RegExp(searchWord, 'gi'), (match) => `<mark>${match}</mark>`) }}></p>
+
+
 
 
                 {/* date for small screen: */}

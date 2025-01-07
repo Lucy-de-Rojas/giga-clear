@@ -49,34 +49,6 @@ const Posts = ({searchWord}:{searchWord: string}) => {
                                 return item.title.toLowerCase().includes(searchWord.toLowerCase()) || item.descriptionShort.toLowerCase().includes(searchWord.toLowerCase());
                         });
 
-
-
-                        // highlight keyword in results:
-                        // filteredPosts = filteredPosts.map((item) => {
-
-                        //         const regex = new RegExp(`(${searchWord})`, 'gi');
-
-
-                        //         const highlightedTitle = item.title.replace(regex, '<span style="font-weight: bold;">$1</span>');
-
-
-                        //         const highlightedDescription = item.descriptionShort.replace(regex, '<span style="font-weight: bold;">$1</span>');
-                        //         return {
-                        //                 ...item,
-                        //                 title: highlightedTitle,
-                        //                 descriptionShort: highlightedDescription
-                        //         };
-                        // });
-
-
-
-
-
-
-
-
-
-
                         setPostsFiltered(filteredPosts);
                 } else {
                         setPostsFiltered(posts);
@@ -102,7 +74,7 @@ const Posts = ({searchWord}:{searchWord: string}) => {
                 {/* if there are filtered posts */}
                         {postsFiltered && postsFiltered.map((item:DataPost) => {
                         // Card goes below:
-                return <Card post={item} key={item.id} />;
+                return <Card post={item} key={item.id} searchWord={searchWord} />;
                         })}
 
 
