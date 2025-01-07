@@ -42,6 +42,7 @@ const Card = ({ post, searchWord }: { post: DataPost, searchWord:string } ): JSX
 
                 {/* card title: */}
                 <h2>{post.title}</h2>
+                <h2 dangerouslySetInnerHTML={{__html: post.title.replace(new RegExp(searchWord, 'gi'), (match) => `<mark>${match}</mark>`)}}></h2>
 
 
 
