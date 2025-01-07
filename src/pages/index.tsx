@@ -3,7 +3,7 @@ import Posts from "src/components/posts";
 import SearchBar from "src/components/searchBar";
 
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 
 
