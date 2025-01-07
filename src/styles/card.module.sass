@@ -43,9 +43,19 @@
 
 
 .paras
-        font-size: 15px
+        font-size: 1rem
         display: flex
+        width: 100%
         justify-content: space-between
+        box-sizing: border-box
+
+
+        @media (max-width: 1500px)
+                flex-direction: column
+
+
+
+
 
         // styling individual paras:
         *
@@ -54,14 +64,15 @@
                 padding: 10px 15px
                 margin: 5px
                 text-align: center
-                border-radius: 10px
+                border-radius: 5px
                 display: flex
                 align-items: center
+                box-sizing: border-box
 
 
 .dateWideScreen
         @media (max-width: $widthScreen)
-                display: none
+                //display: none
 
 
 
